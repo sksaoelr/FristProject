@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>안녕 세상아!</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <a href="/"><button>Home</button></a>
+    <a href=""><button>login</button></a>
+    <a href="{% url 'user:register' %}"><button>sign_up</button></a>
+    <div style="border: 1px black solid; margin: 20px 0px;"></div>
+    {% block contents %}
+    {% endblock contents %}
+</body>
+</html>
