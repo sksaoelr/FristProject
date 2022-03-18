@@ -1,12 +1,14 @@
 {% extends 'home/index.html' %}
 
 {% block contents %}
-<div>게시판 상세보기</div>
-<div style="border: 1px black solid; margin: 20px 0px"></div>
+<div>게시판 상세보기!</div>
+<div style="border: 1px black solid; margin: 20px 0px;"></div>
+
 {% if writer %}
-<a href=""><button>수정</button></a>
+<a href="/board/detail/{{ board.id }}/modify/"><button>수정</button></a>
 <a href="/board/detail/{{ board.id }}/delete/"><button>삭제</button></a>
 {% endif %}
+
 <div>
     게시판 종류 : {{ board.board_name }}
 </div>
@@ -19,4 +21,5 @@
 <div>
     내용 : {{ board.contents|safe }}
 </div>
+
 {% endblock contents %}
